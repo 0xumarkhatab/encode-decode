@@ -24,7 +24,7 @@ AES-256-CBC encrypt and decrypt with two inputs only: a secret and some text. Th
 
 ## Use
 
-Web page: open `index.html`, or deploy the folder as a static site.
+Web page: use the live version at https://encrypt-decrypt-iota.vercel.app/, open `index.html` locally, or deploy the folder as a static site.
 
 Command line:
 
