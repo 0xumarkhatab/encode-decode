@@ -70,8 +70,9 @@
 
     <details>
       <summary>How it works</summary>
-      <p>This matches encode-decode.com. The key is your secret as UTF-8 bytes, padded with zeros to 32 bytes (longer secrets are cut at 32). The IV is 16 zero bytes, padding is PKCS#7, and the output is base64.</p>
-      <p>Because the IV never changes, the same input and secret always give the same output. That’s fine for compatibility, but don’t rely on it to protect real secrets.</p>
+      <p>You give a secret and an input. The page gives the AES-256-CBC result as base64. The result matches encode-decode.com.</p>
+      <p>The page deletes all data on every refresh. It also deletes all data when you close the page or press Clear all. Nothing is saved or sent.</p>
+      <p>The same input and secret always give the same output. This is good for compatibility, but do not use it to protect real secrets.</p>
     </details>
 
     <footer>
