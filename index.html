@@ -7,13 +7,28 @@
   <meta name="robots" content="noindex, nofollow">
   <meta name="google" content="notranslate">
   <title>AES-256-CBC</title>
-  <link rel="icon" href="data:,">
+  <meta name="description" content="Encrypt and decrypt AES-256-CBC in your browser with just a secret and an input. Compatible with encode-decode.com.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AES-256-CBC">
+  <meta property="og:description" content="Encrypt and decrypt in your browser with just a secret and an input. Nothing leaves the page.">
+  <meta property="og:image" content="assets/preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Crect width='128' height='128' rx='28' fill='%232340b8'/%3E%3Cpath d='M44 58V44a20 20 0 0 1 40 0v14' fill='none' stroke='%23fff' stroke-width='9' stroke-linecap='round'/%3E%3Crect x='30' y='56' width='68' height='50' rx='10' fill='%23fff'/%3E%3Ccircle cx='64' cy='76' r='7' fill='%232340b8'/%3E%3Cpath d='M60.5 80h7l2 14h-11z' fill='%232340b8'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css">
   <script src="app.js" defer></script>
 </head>
 <body>
   <main>
-    <h1>AES-256-CBC</h1>
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 128 128" aria-hidden="true">
+        <rect class="logo-bg" width="128" height="128" rx="28"/>
+        <path class="logo-shackle" d="M44 58V44a20 20 0 0 1 40 0v14"/>
+        <rect class="logo-body" x="30" y="56" width="68" height="50" rx="10"/>
+        <circle class="logo-hole" cx="64" cy="76" r="7"/>
+        <path class="logo-hole" d="M60.5 80h7l2 14h-11z"/>
+      </svg>
+      <h1>AES-256-CBC</h1>
+    </div>
     <p class="lede">Encrypt and decrypt in your browser. Nothing is sent anywhere, and the page forgets everything when you refresh or close it.</p>
 
     <div class="field">
@@ -57,6 +72,14 @@
       <p>This matches encode-decode.com. The key is your secret as UTF-8 bytes, padded with zeros to 32 bytes (longer secrets are cut at 32). The IV is 16 zero bytes, padding is PKCS#7, and the output is base64.</p>
       <p>Because the IV never changes, the same input and secret always give the same output. That’s fine for compatibility, but don’t rely on it to protect real secrets.</p>
     </details>
+
+    <footer>
+      <p>Made by <strong>0xumarkhatab</strong>:
+        <a href="https://x.com/0xumarkhatab" target="_blank" rel="noopener noreferrer">X</a> ·
+        <a href="https://github.com/0xumarkhatab" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </p>
+      <p>Credit: the scheme comes from <a href="https://encode-decode.com/" target="_blank" rel="noopener noreferrer">encode-decode.com</a>. This page is an independent, client-side re-implementation.</p>
+    </footer>
   </main>
 </body>
 </html>

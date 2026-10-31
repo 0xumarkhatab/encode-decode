@@ -42,8 +42,26 @@ main {
   padding: clamp(2rem, 7vw, 4.5rem) 1.25rem 3rem;
 }
 
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.logo {
+  flex: none;
+  width: clamp(2.75rem, 10vw, 3.75rem);
+  height: auto;
+}
+
+.logo-bg { fill: var(--accent); }
+.logo-shackle { fill: none; stroke: var(--accent-ink); stroke-width: 9; stroke-linecap: round; }
+.logo-body { fill: var(--accent-ink); }
+.logo-hole { fill: var(--accent); }
+
 h1 {
-  margin: 0 0 0.75rem;
+  margin: 0;
   font-size: clamp(2.25rem, 8vw, 3.5rem);
   font-weight: 800;
   line-height: 1;
@@ -174,3 +192,17 @@ summary {
 }
 
 details p { margin: 0.75rem 0 0; }
+
+footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+footer p { margin: 0 0 0.5rem; }
+
+footer a { color: var(--accent); }
+
+footer strong { color: var(--ink); }
