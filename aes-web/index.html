@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" translate="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="google" content="notranslate">
+  <title>AES-256-CBC</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>AES-256-CBC</h1>
+    <p class="lede">Encrypt and decrypt in your browser. Nothing is sent anywhere, and the page forgets everything when you refresh or close it.</p>
+
+    <div class="field">
+      <label for="secret">Secret</label>
+      <div class="row">
+        <input id="secret" type="password"
+          autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"
+          data-gramm="false" data-gramm_editor="false" data-enable-grammarly="false"
+          data-lpignore="true" data-1p-ignore data-bwignore>
+        <button type="button" id="toggle" class="quiet" aria-pressed="false" aria-controls="secret">Show</button>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="input">Input</label>
+      <textarea id="input" rows="5" placeholder="Text to encrypt, or base64 to decrypt"
+        autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"
+        data-gramm="false" data-gramm_editor="false" data-enable-grammarly="false"></textarea>
+    </div>
+
+    <div class="actions">
+      <button type="button" id="encrypt" class="primary">Encrypt</button>
+      <button type="button" id="decrypt" class="primary">Decrypt</button>
+      <span class="spacer"></span>
+      <button type="button" id="clear" class="quiet">Clear all</button>
+    </div>
+
+    <div class="field">
+      <div class="label-row">
+        <label for="output">Output</label>
+        <button type="button" id="copy" class="quiet small">Copy</button>
+      </div>
+      <textarea id="output" rows="5" readonly
+        autocomplete="off" spellcheck="false"
+        data-gramm="false" data-gramm_editor="false" data-enable-grammarly="false"></textarea>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </div>
+
+    <details>
+      <summary>How it works</summary>
+      <p>This matches encode-decode.com. The key is your secret as UTF-8 bytes, padded with zeros to 32 bytes (longer secrets are cut at 32). The IV is 16 zero bytes, padding is PKCS#7, and the output is base64.</p>
+      <p>Because the IV never changes, the same input and secret always give the same output. That’s fine for compatibility, but don’t rely on it to protect real secrets.</p>
+    </details>
+  </main>
+</body>
+</html>
